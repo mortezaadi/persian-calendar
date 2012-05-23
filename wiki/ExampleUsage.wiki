@@ -1,14 +1,13 @@
 How to use Persian Calendar
 
-= Introduction =
+= About =
 
 Here is some example of how to use PersianCalendar library.
 
 
-= Details =
+= Example codes =
 
-Add your content here.  Format your content with:
-  
+  {{{
    //construct new  PersianCalendar object
    PersianCalendar persianCal = PersianCalendar();
    
@@ -50,3 +49,4 @@ Add your content here.  Format your content with:
    PersianCalendar p =  new PersianDateParser("1361-3-1","-").getPersianDate();
    System.out.println(p.getPersianShortDate());
    System.out.println(p.getTime());
+}}}
