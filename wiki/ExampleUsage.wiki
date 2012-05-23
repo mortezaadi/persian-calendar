@@ -4,6 +4,10 @@ How to use Persian Calendar
 
 Here is some example of how to use PersianCalendar library.
 
+= How to use the library =
+
+ 1) download latest PersianCalendar Library from
+          http://code.google.com/p/persian-calendar/downloads/list
 
 = Example codes =
 
