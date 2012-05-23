@@ -9,6 +9,15 @@ Here is some example of how to use PersianCalendar library.
  1) download latest PersianCalendar Library from
           http://code.google.com/p/persian-calendar/downloads/list
 
+
+ 2) Add library to classPath
+
+
+ 3) Import needed packages
+    {{{
+      import com.sahandrc.calendar.*;
+    }}}
+
 = Example codes =
 
   {{{
