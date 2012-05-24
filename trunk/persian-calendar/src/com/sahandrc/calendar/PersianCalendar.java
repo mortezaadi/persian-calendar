@@ -86,7 +86,7 @@ import java.util.TimeZone;
  * }
  *       <pre>
  * @author Morteza  contact: <a href="mailto:Mortezaadi@gmail.com">Mortezaadi@gmail.com</a>
- * @version 1.0
+ * @version 1.1
  */
 public class PersianCalendar extends GregorianCalendar {
     
