@@ -108,19 +108,19 @@ public class PersianCalendar extends GregorianCalendar {
      * 
      * most of the time we don't care about TimeZone when we persisting Date 
      * or doing some calculation on date.
-     *  <strong> Default TimeZone was set to "UTC" </strong> in order to make developer to work more convenient 
+     *  <strong> Default TimeZone was set to "GMT" </strong> in order to make developer to work more convenient 
      *  with the library; however you can change the TimeZone as you do in GregorianCalendar by calling 
      *  setTimeZone()
      */
     public PersianCalendar() {
-       setTimeZone(TimeZone.getTimeZone("UTC"));
+       setTimeZone(TimeZone.getTimeZone("GMT"));
     }
     
     /**
      * Calculate persian date from current Date and
      * populates the corresponding fields(persianYear, persianMonth, persianDay)
      */
-    private void calculatePersianDate() {
+    protected void calculatePersianDate() {
         long julianDate = ((long) Math.floor((getTimeInMillis() - PersianCalendarConstants.MILLIS_JULIAN_EPOCH ))/
                 PersianCalendarConstants.MILLIS_OF_A_DAY);
         long PersianRowDate = PersianCalendarUtils.julianToPersian(julianDate);
@@ -140,7 +140,7 @@ public class PersianCalendar extends GregorianCalendar {
      * @return
      */
     public boolean isPersianLeapYear() {
-        calculatePersianDate();       
+        //calculatePersianDate();       
         return PersianCalendarUtils.isPersianLeapYear(this.persianYear);
     }
 
@@ -162,7 +162,7 @@ public class PersianCalendar extends GregorianCalendar {
     }
 
     public int getPersianYear() {
-        calculatePersianDate();
+        //calculatePersianDate();
         return this.persianYear ;
     }
 
@@ -171,7 +171,7 @@ public class PersianCalendar extends GregorianCalendar {
      * @return int    persian month number 
      */
     public int getPersianMonth() {
-        calculatePersianDate();
+        //calculatePersianDate();
         return this.persianMonth+1;
     }
 
@@ -180,7 +180,7 @@ public class PersianCalendar extends GregorianCalendar {
      * @return String   persian month name
      */
     public String getPersianMonthName() {
-        calculatePersianDate();
+        //calculatePersianDate();
         return PersianCalendarConstants.persianMonthNames[this.persianMonth];
     }
 
@@ -189,7 +189,7 @@ public class PersianCalendar extends GregorianCalendar {
      * @return int Persian day in month
      */
     public int getPersianDay() {
-        calculatePersianDate();
+        //calculatePersianDate();
         return this.persianDay;
     }
 
@@ -229,7 +229,7 @@ public class PersianCalendar extends GregorianCalendar {
      *          default delimiter is '/'
      */
     public String getPersianShortDate(){
-        calculatePersianDate();
+        //calculatePersianDate();
         return "" + formatToMilitary(this.persianYear) + delimiter + formatToMilitary(getPersianMonth()) + delimiter
                 + formatToMilitary(this.persianDay);
     }
@@ -270,7 +270,7 @@ public class PersianCalendar extends GregorianCalendar {
                 return;
         }
         add(field,amount);
-        
+        calculatePersianDate();
     }
     
     /**<pre>
@@ -299,5 +299,42 @@ public class PersianCalendar extends GregorianCalendar {
      */
     public void setDelimiter(String delimiter) {
         this.delimiter = delimiter;
+    }
+    
+    
+    @Override
+    public String toString() {
+        String str = super.toString();
+        return str.substring(0, str.length()-1) + ",PersianDate=" 
+                + getPersianShortDate() + "]";
+    }
+    
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+                    
+    }
+    
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+    
+    @Override
+    public void set(int field, int value) {
+        super.set(field, value);
+        calculatePersianDate();
+    }
+    
+    @Override
+    public void setTimeInMillis(long millis) {
+        super.setTimeInMillis(millis);
+        calculatePersianDate();
+    }
+    
+    @Override
+    public void setTimeZone(TimeZone zone) {
+        super.setTimeZone(zone);
+        calculatePersianDate();
     }
 }

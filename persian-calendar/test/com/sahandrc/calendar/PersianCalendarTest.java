@@ -103,19 +103,19 @@ public class PersianCalendarTest {
         
         persianCal.addPersianDate(Calendar.MONTH, 33);
      
-        assertEquals(4, persianCal.getPersianYear());
+        assertEquals(1364, persianCal.getPersianYear());
         
         assertEquals(3, persianCal.getPersianMonth());
         assertEquals(1, persianCal.getPersianDay());
         
         
         persianCal.addPersianDate(Calendar.YEAR, 5);
-        assertEquals(9, persianCal.getPersianYear());
+        assertEquals(1369, persianCal.getPersianYear());
         
 
         
         persianCal.addPersianDate(Calendar.DATE, 5);
-        assertEquals(9, persianCal.getPersianYear());
+        assertEquals(1369, persianCal.getPersianYear());
         assertEquals(6, persianCal.getPersianDay());
         
 
