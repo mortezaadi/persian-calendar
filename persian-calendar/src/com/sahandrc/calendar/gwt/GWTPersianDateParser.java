@@ -1,4 +1,21 @@
+/**
+ * Persian Calendar see: http://code.google.com/p/persian-calendar/
+   Copyright (C) 2012  Mortezaadi@gmail.com
+   GWTPersianDateParser.java
+   
+   Persian Calendar is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
 
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 /**
  * Persian Calendar see: http://code.google.com/p/persian-calendar/
    Copyright (C) 2012  Mortezaadi@gmail.com
@@ -25,7 +42,7 @@ import com.sahandrc.calendar.utils.PersianCalendarUtils;
 
 
 /**
- * Parses text from the beginning of the given string to produce a PersianCalendar.
+ * Parses text from the beginning of the given string to produce a GWTPersianCalendar.
  * 
  * <p>
  * See the {@link #getPersianDate()} method for more information
@@ -34,8 +51,8 @@ import com.sahandrc.calendar.utils.PersianCalendarUtils;
  *                Example
  *                     
  *  {@code
- *    PersianCalendar pCal =
- *     new PersianDateParser("1361/3/1").getPersianDate();             
+ *    GWTPersianCalendar pCal =
+ *     new GWTPersianDateParser("1361/3/1").getPersianDate();             
  *  }
  * </pre>
  * 
@@ -57,8 +74,8 @@ public class GWTPersianDateParser {
      *                     Example
      *                     
      *  {@code
-     *    PersianCalendar pCal =
-     *     new PersianDateParser("1361/3/1").getPersianDate();             
+     *    GWTPersianCalendar pCal =
+     *     new GWTPersianDateParser("1361/3/1").getPersianDate();             
      *  }
      * </pre>
      * @param dateString
@@ -78,8 +95,8 @@ public class GWTPersianDateParser {
      *                     Example
      *                     
      *  {@code
-     *    PersianCalendar pCal =
-     *     new PersianDateParser("1361-3-1","-").getPersianDate();             
+     *    GWTPersianCalendar pCal =
+     *     new GWTPersianDateParser("1361-3-1","-").getPersianDate();             
      *  }
      * </pre>
      * @param dateString
@@ -91,9 +108,9 @@ public class GWTPersianDateParser {
     }
     
     /**
-     * Produce the PersianCalendar object from given DateString
+     * Produce the GWTPersianCalendar object from given DateString
      * throws Exception if couldn't parse the text.
-     * @return PersianCalendar object 
+     * @return GWTPersianCalendar object 
      * @exception RuntimeException
      */
     public GWTPersianCalendar getPersianDate(){
