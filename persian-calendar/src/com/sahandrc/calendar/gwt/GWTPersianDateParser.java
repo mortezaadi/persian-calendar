@@ -69,7 +69,7 @@ public class GWTPersianDateParser {
      * the default delimiter is '/'.
      * 
      * To assign deferment delimiter use:
-     * {@link #PersianDateParser(String dateString, String delimiter)}
+     * {@link #GWTPersianDateParser(String dateString, String delimiter)}
      * 
      *                     Example
      *                     
@@ -90,7 +90,7 @@ public class GWTPersianDateParser {
      * you can set different delimiter to parse the date
      * based on this delimiter.
      * see also:
-     * {@link #PersianDateParser(String dateString)}
+     * {@link #GWTPersianDateParser(String dateString)}
      * 
      *                     Example
      *                     
