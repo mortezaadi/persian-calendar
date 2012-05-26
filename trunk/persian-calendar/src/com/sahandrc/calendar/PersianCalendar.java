@@ -140,7 +140,7 @@ public class PersianCalendar extends GregorianCalendar {
      * Determines if the given year is a leap year in persian calendar.
      * Returns true if the given year is a leap year.
      * 
-     * @return
+     * @return boolean
      */
     public boolean isPersianLeapYear() {
         //calculatePersianDate();       
@@ -297,7 +297,6 @@ public class PersianCalendar extends GregorianCalendar {
 
     /**
      * assign delimiter to use as a separator of date fields.
-     * <code>{@link getDelimiter}</code>
      * @param delimiter
      */
     public void setDelimiter(String delimiter) {

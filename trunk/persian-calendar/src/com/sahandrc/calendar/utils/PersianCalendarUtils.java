@@ -39,8 +39,10 @@ public class PersianCalendarUtils {
      *   is not as difficult as it looks. Basically it's a mather of dividing, rounding and multiplying.
      *   This routine uses Julian Day Number 1948321 as focal point, since that Julian Day Number
      *    corresponds with 1 Farvardin (1) 1. 
-     * @param julianDate
-     * @return
+     * @param year int persian year
+     * @param month int persian month
+     * @param day int persian day
+     * @return long
      */
     public static long persianToJulian(long year, int month, int day) {      
         return 365L * ((ceil(year - 474L, 2820D) + 474L) - 1L)
@@ -55,7 +57,7 @@ public class PersianCalendarUtils {
     
     /**
      * Calculate whether current year is Leap year in persian or not
-     * @return
+     * @return boolean
      */
     public static boolean isPersianLeapYear(int persianYear) {
         return PersianCalendarUtils.ceil((38D
@@ -68,7 +70,7 @@ public class PersianCalendarUtils {
      * Since the Persian calendar is a highly regular calendar, converting to and from a Julian Day Number
      * is not as difficult as it looks. Basically it's a mather of dividing, rounding and multiplying.
      * @param julianDate
-     * @return
+     * @return long
      */
     public static long julianToPersian(long julianDate) {
         long persianEpochInJulian = julianDate - persianToJulian(475L, 0, 1);
@@ -86,7 +88,7 @@ public class PersianCalendarUtils {
      * Ceil function in original algorithm
      * @param double1
      * @param double2
-     * @return
+     * @return long
      */
     public static long ceil(double double1, double double2) {
         return (long) (double1 - double2 * Math.floor(double1 / double2));
