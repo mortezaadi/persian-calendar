@@ -1,3 +1,4 @@
+
 /**
  * Persian Calendar see: http://code.google.com/p/persian-calendar/
    Copyright (C) 2012  Mortezaadi@gmail.com
@@ -16,7 +17,9 @@
    You should have received a copy of the GNU General Public License
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.sahandrc.calendar;
+package com.sahandrc.calendar.gwt;
+
+import java.util.Date;
 
 import com.sahandrc.calendar.utils.PersianCalendarUtils;
 
@@ -39,7 +42,7 @@ import com.sahandrc.calendar.utils.PersianCalendarUtils;
  * @author Morteza  contact: <a href="mailto:Mortezaadi@gmail.com">Mortezaadi@gmail.com</a>
  * @version 1.0
  */
-public class PersianDateParser {
+public class GWTPersianDateParser {
     
     private String dateString;
     private String delimiter = "/";
@@ -60,7 +63,7 @@ public class PersianDateParser {
      * </pre>
      * @param dateString
      */
-    public PersianDateParser(String dateString) {
+    public GWTPersianDateParser(String dateString) {
         this.dateString=dateString;
     }
     
@@ -82,7 +85,7 @@ public class PersianDateParser {
      * @param dateString
      * @param delimiter
      */
-    public PersianDateParser(String dateString, String delimiter) {  
+    public GWTPersianDateParser(String dateString, String delimiter) {  
         this(dateString);
         this.delimiter = delimiter;
     }
@@ -93,7 +96,7 @@ public class PersianDateParser {
      * @return PersianCalendar object 
      * @exception RuntimeException
      */
-    public PersianCalendar getPersianDate(){
+    public GWTPersianCalendar getPersianDate(){
         
         checkDateStringInitialValidation();
         
@@ -104,9 +107,10 @@ public class PersianDateParser {
         
         checkPersianDateValidation(year,month,day);
         
-        PersianCalendar pCal = new PersianCalendar();
+        GWTPersianCalendar pCal = new GWTPersianCalendar();
+     
         pCal.setPersianDate(year, month, day);
-        
+
         return pCal;
     }
     

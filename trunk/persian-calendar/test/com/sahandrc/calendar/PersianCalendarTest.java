@@ -25,6 +25,8 @@ import java.util.Calendar;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.sahandrc.calendar.utils.PersianCalendarConstants;
+
 public class PersianCalendarTest {
 
     private PersianCalendar persianCal;
