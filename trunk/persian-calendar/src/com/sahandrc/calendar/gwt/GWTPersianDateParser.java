@@ -36,8 +36,6 @@
  */
 package com.sahandrc.calendar.gwt;
 
-import java.util.Date;
-
 import com.sahandrc.calendar.utils.PersianCalendarUtils;
 
 

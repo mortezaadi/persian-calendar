@@ -131,6 +131,7 @@ public class GWTPersianCalendar extends Date {
      * 
      * @return String Name of the day in week
      */
+    @SuppressWarnings("deprecation")
     public String getPersianWeekDayName() {
         //value (0 = Sunday, 1 = Monday, 2 = Tuesday, 3 = Wednesday, 4 = Thursday, 5 = Friday, 6 = Saturday)
         switch(getDay())
@@ -261,9 +262,10 @@ public class GWTPersianCalendar extends Date {
         return super.hashCode();
     }
     
+    @SuppressWarnings("deprecation")
     @Override
     public void setDate(int date) {
-        // TODO Auto-generated method stub
+     
         super.setDate(date);
         calculatePersianDate();
     }
@@ -280,26 +282,31 @@ public class GWTPersianCalendar extends Date {
         super.setTime(time);
         calculatePersianDate();
     }
+    @SuppressWarnings("deprecation")
     @Override
     public void setHours(int hours) {
         super.setHours(hours);
         calculatePersianDate();
     }
+    @SuppressWarnings("deprecation")
     @Override
     public void setMinutes(int minutes) {
         super.setMinutes(minutes);
         calculatePersianDate();
     }
+    @SuppressWarnings("deprecation")
     @Override
     public void setMonth(int month) {
         super.setMonth(month);
         calculatePersianDate();
     }
+    @SuppressWarnings("deprecation")
     @Override
     public void setSeconds(int seconds) {
         super.setSeconds(seconds);
         calculatePersianDate();
     }
+    @SuppressWarnings("deprecation")
     @Override
     public void setYear(int year) {
         super.setYear(year);
