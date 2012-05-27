@@ -29,7 +29,7 @@ public class GWTPersianCalendar extends Date {
     public static int YEAR=1;
     public static int MONTH=2;
     public static int DAY=3;
-    public static int ZONE_OFFSET = 3;
+    public static int ZONE_OFFSET = 4;
     
     /**
      * 
