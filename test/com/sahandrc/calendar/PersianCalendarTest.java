@@ -135,5 +135,16 @@ public class PersianCalendarTest {
         assertEquals(3, persianCal.getPersianMonth());
         assertEquals(1, persianCal.getPersianDay());
     }
+    
+    @Test
+	public void testBug() throws Exception {
+		PersianCalendar c = new PersianCalendar();
+		System.out.println(c);
+		c.set(Calendar.MINUTE,50);
+		System.out.println(c);
+		PersianCalendar c2 = new PersianCalendar();
+		c2.setTimeInMillis(c.getTimeInMillis());
+		System.out.println(c2.get(Calendar.MINUTE));
+	}
 
 }
